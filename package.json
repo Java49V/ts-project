@@ -1,7 +1,6 @@
 {
   "name": "ts-project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,14 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^4.9.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvgorsky/ts-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dvgorsky/ts-project/issues"
+  },
+  "homepage": "https://github.com/dvgorsky/ts-project#readme",
+  "description": ""
 }
