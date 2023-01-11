@@ -5,7 +5,7 @@ import { ShapesContainer } from "./ShapesContainer"
 import { Cipher } from "./Cipher.1"
 import { Decipher } from "./Decipher.1"
 
-const inputStr = 'az2:W';
+const inputStr = 'mln2:Z';
 const choiceC = new Cipher('a'.charCodeAt(0), 'z'.charCodeAt(0), 50);
 const strS: string = choiceC.cipher(inputStr);
 console.log(inputStr, strS, choiceC.decipher(strS));

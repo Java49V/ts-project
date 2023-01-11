@@ -5,7 +5,7 @@ const Square_1 = require("./Square");
 const ShapesContainer_1 = require("./ShapesContainer");
 const Cipher_1_1 = require("./Cipher.1");
 const Decipher_1_1 = require("./Decipher.1");
-const inputStr = 'az2:W';
+const inputStr = 'mln2:Z';
 const choiceC = new Cipher_1_1.Cipher('a'.charCodeAt(0), 'z'.charCodeAt(0), 50);
 const strS = choiceC.cipher(inputStr);
 console.log(inputStr, strS, choiceC.decipher(strS));
