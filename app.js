@@ -1,23 +1,31 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Rectangle_1 = require("./Rectangle");
-const Square_1 = require("./Square");
-const ShapesContainer_1 = require("./ShapesContainer");
-const Cipher_1_1 = require("./Cipher.1");
-const Decipher_1_1 = require("./Decipher.1");
-const inputStr = 'mln2:Z';
-const choiceC = new Cipher_1_1.Cipher('a'.charCodeAt(0), 'z'.charCodeAt(0), 50);
-const strS = choiceC.cipher(inputStr);
-console.log(inputStr, strS, choiceC.decipher(strS));
-const choiceD = new Decipher_1_1.Decipher('a'.charCodeAt(0), 'z'.charCodeAt(0), 50);
-const strA = choiceD.cipher(inputStr);
-console.log(inputStr, strA, choiceD.decipher(strA));
-const shapes = [
-    new Rectangle_1.Rectangle(5, 7),
-    new Square_1.Square(6)
-];
-const container = new ShapesContainer_1.ShapesContainer(shapes);
-const sumOfShapes = container.getSquare();
-const sumOfPerim = container.getPerimeter();
-console.log(sumOfShapes, sumOfPerim);
+const WageEmployee_1 = require("./WageEmployee");
+const SalePerson_1 = require("./SalePerson");
+const Company_1 = require("./Company");
+const employee = new WageEmployee_1.WageEmployee(123, "Vasya", 2000, "QA", 10000, 100, 50);
+console.log(employee.id);
+const sales = new SalePerson_1.SalesePerson(129, "Vasya", 2000, "QA", 40000, 100, 50, 40000, 20);
+console.log(`salary + percentage of revenue = ${sales.computeSalary()}`);
+//*****************2.2.2.	Method “addEmployee” *//
+const company = new Company_1.Company([]);
+company.addEmployee(sales);
+company.addEmployee(employee);
+company.addEmployee(new SalePerson_1.SalesePerson(323, "Vasya", 2000, "QA", 40000, 100, 50, 40000, 20));
+company.addEmployee(new SalePerson_1.SalesePerson(223, "Dima", 2001, "QA", 30000, 100, 50, 30000, 30));
+//*****************2.2.4.	Method “getEmployee and 2.2.3.	Method “removeEmployee””””” *//
+console.log(company.removeEmployee(123));
+const res = company.getEmployee(223);
+if (res != null) {
+    console.log(res);
+}
+else {
+    console.log('nothing');
+}
+//*****************Method “2.2.5.	Method “getEmployeeBySalary”” *//
+const elements = company.getEmployeeBySalary(20000, 50000);
+elements.forEach(elem => console.log(`An employee in a given salary range with id = ${elem.id}`));
+//*****************2.2.6.	Method “computeBudget ””” *//
+console.log(`Total salary for the company ${company.computeBudget()}`);
+//console.log(getId.getEmployee());
 //# sourceMappingURL=app.js.map
